@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Felix Titling';
+    src: url('#{$assetPath}/fonts/FelixTitlingMT.woff2') format('woff2'),
+        url('#{$assetPath}/fonts/FelixTitlingMT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

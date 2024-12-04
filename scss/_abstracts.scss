@@ -1,0 +1,62 @@
+// Sass variables
+$xs: 767px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1500px;
+
+$assetPath: "../../assets";
+
+// Sass mixins
+@mixin for-xs { // max 767px
+    @media (max-width: $xs){
+        @content;
+    }
+}
+@mixin for-sm { // 576px
+    @media (min-width: $sm){
+        @content;
+    }
+}
+@mixin for-md { // 768px
+    @media (min-width: $md){
+        @content;
+    }
+}
+@mixin for-lg { // 992px
+    @media (min-width: $lg){
+        @content;
+    }
+}
+@mixin for-xl { // 1200px
+    @media (min-width: $xl){
+        @content;
+    }
+}
+@mixin for-xxl { // 1400px
+    @media (min-width: $xxl){
+        @content;
+    }
+}
+
+@mixin rounded($round: 20px){
+    border-radius: $round;
+    overflow: hidden;
+}
+
+@for $gap from 1 through 20{
+    .gap-#{$gap}x{
+        gap: $gap + px;
+    }
+}
+@for $font from 12 through 18{
+    .font-#{$font}{
+        font-size: $font + px;
+    }
+}
+@for $fw from 1 through 9{
+    .fw-#{$fw * 100} {
+        font-weight: ($fw * 100);
+    }
+}

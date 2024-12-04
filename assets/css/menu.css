@@ -1,0 +1,393 @@
+/* ================== Desktop Main Menu CSS ================== */
+.wsmenuexpandermain{
+	position: relative;
+}
+.wsmenu>.wsmenu-list {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+.wsmenu>.wsmenu-list>li>a {
+	display: flex;
+	align-items: center;
+	color: #FFFEF2;
+	font-size: 18px;
+	padding: 0 0 20px;
+	line-height: normal;
+	text-decoration: none;
+	position: relative;
+	font-weight: 500;
+	transition: color .3s ease;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-bottom: solid 2px transparent;
+}
+.wsmenu>.wsmenu-list>li>a .wsarrow:after {
+	border-left: 4px solid rgba(0, 0, 0, 0);
+	border-right: 4px solid rgba(0, 0, 0, 0);
+	border-top: 4px solid;
+	content: "";
+	height: 0;
+	margin: 4px 0 0 7px;
+	display: block;
+}
+
+@media (min-width: 992px) {
+	.wsmenu>.wsmenu-list>li.active > a{
+		border-color: #0EE3C4;
+	}
+}
+
+@media (min-width: 1200px) {
+	.wsmenu>.wsmenu-list {
+		gap: 50px;
+	}
+	.wsmenu>.wsmenu-list>li>ul.sub-menu,
+	.wsmenu>.wsmenu-list>li>.wsmegamenu{
+		top: 86px;
+	}
+}
+
+.fixed-top .wsanimated-arrow span, 
+.fixed-top .wsanimated-arrow span:before, 
+.fixed-top .wsanimated-arrow span:after{
+	background: #333;
+}
+  
+/*==============================================================================
+						Start Mobile CSS
+===============================================================================*/
+/* ================== Mobile Menu Change Brake Point ================== */
+@media (max-width: 991px) {
+	.wsmenu {
+		width: 100%;
+		background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+		left: 0;
+		overflow-y: hidden;
+		padding: 0;
+		top: 0;
+		visibility: hidden;
+		position: fixed;
+		margin: 0px;
+	}
+
+	.wsmenu>.wsmenu-list {
+		height: auto;
+		min-height: 100%;
+		padding: 0;
+		width: 240px;
+		background: #fff;
+		padding-bottom: 0;
+		margin-left: -240px;
+		display: block;
+		text-align: center;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+	}
+
+	.wsmenu>.wsmenu-list>li {
+		width: 100%;
+		display: block;
+		float: none;
+		border-right: none;
+		background-color: transparent;
+		position: relative;
+		white-space: inherit;
+		clear: right;
+	}
+
+	.wsmenu>.wsmenu-list>li>a {
+		padding: 13px 33px 13px 15px;
+		font-size: 18px;
+		text-align: left;
+		background-color: transparent;
+		color: #000;
+		line-height: normal;
+		position: static;
+		font-weight: 400;
+		width: 100%;
+		text-transform: inherit;
+	}
+
+	.wsmenu>.wsmenu-list>li>a .wsarrow:after,
+	.wsmenu>.wsmenu-list>li>a img,
+	.wsmenu>.wsmenu-list>li>a::after {
+		display: none;
+	}
+
+	/* ================== Mobile Slide Down Links CSS ================== */
+	.wsmenu>.wsmenu-list>li>ul.sub-menu {
+		display: none;
+		position: relative;
+		top: 0px;
+		background-color: #fff;
+		border: none;
+		padding: 0px;
+		opacity: 1 !important;
+		visibility: visible !important;
+		-webkit-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-o-transform: none !important;
+		transform: none !important;
+		-webkit-transition: inherit !important;
+		-moz-transition: inherit !important;
+		transition: inherit !important;
+		-webkit-transform-style: flat !important;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>a {
+		line-height: 20px;
+		font-size: 14px;
+		padding: 12px 12px 12px 30px;
+		color: #4c4c4c;
+		border: none !important;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li span+a {
+		padding-right: 30px;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>a>i {
+		display: none;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu {
+		width: 100%;
+		position: static;
+		left: 100%;
+		top: 0;
+		display: none;
+		margin: 0px;
+		padding: 0px;
+		border: solid 0px;
+		transform: none;
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
+		-webkit-transition: inherit;
+		-moz-transition: inherit;
+		transition: inherit;
+		-webkit-transform-style: flat;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li {
+		margin: 0px 0px 0px 0px;
+		padding: 0px;
+		position: relative;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>a {
+		line-height: 20px;
+		font-size: 13px;
+		padding: 10px 0px 10px 26px;
+		color: #383838;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li span+a {
+		padding-right: 30px;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>a>i {
+		display: none;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>a:hover {
+		background-color: #e7e7e7;
+		color: #666666;
+		text-decoration: underline;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>a.active {
+		color: #000;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li:hover>a {
+		color: #000;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>ul.sub-menu {
+		width: 100%;
+		position: static;
+		left: 100%;
+		top: 0;
+		display: none;
+		margin: 0px;
+		padding: 0px;
+		border: solid 0px;
+		transform: none;
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
+		-webkit-transition: inherit;
+		-moz-transition: inherit;
+		transition: inherit;
+		-webkit-transform-style: flat;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>ul.sub-menu>li {
+		margin: 0px 0px 0px 0px;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>ul.sub-menu>li>a {
+		line-height: 20px;
+		font-size: 13px;
+		padding: 10px 0px 10px 34px;
+		color: #383838;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>ul.sub-menu>li span+a {
+		padding-right: 30px;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>ul.sub-menu>li>a>i {
+		display: none;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>ul.sub-menu>li>a:hover {
+		background-color: #e7e7e7;
+		color: #666666;
+		text-decoration: underline;
+	}
+
+	.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>ul.sub-menu>li>a.active {
+		color: #000;
+	}
+
+	/* Mobile Toggle Menu icon (X ICON) */
+	.wsanimated-arrow {
+		position: absolute;
+		left: 0;
+		top: -17px;
+		z-index: 9999;
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		-ms-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+	}
+
+	.wsanimated-arrow {
+		cursor: pointer;
+		padding: 17px 30px 17px 8px;
+		margin: 0;
+		left: auto;
+		right: 0;
+	}
+
+	.wsanimated-arrow span,
+	.wsanimated-arrow span:before,
+	.wsanimated-arrow span:after {
+		cursor: pointer;
+		height: 2px;
+		width: 17px;
+		background: #fff;
+		position: absolute;
+		display: block;
+		content: '';
+		right: 0;
+	}
+
+	.wsanimated-arrow span:before {
+		top: -8px;
+		width: 23px;
+	}
+
+	.wsanimated-arrow span:after {
+		bottom: -8px;
+		width: 23px;
+	}
+
+	.wsanimated-arrow span,
+	.wsanimated-arrow span:before,
+	.wsanimated-arrow span:after {
+		transition: all 500ms ease-in-out;
+	}
+
+	.wsactive .wsanimated-arrow span:after {
+		width: 23px;
+		background: #fff;
+	}
+
+	.wsactive .wsanimated-arrow span {
+		background-color: transparent;
+	}
+
+	.wsactive .wsanimated-arrow span:before,
+	.wsactive .wsanimated-arrow.active span:after {
+		top: 8px;
+		background: #fff;
+	}
+
+	.wsactive .wsanimated-arrow span:before {
+		transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		bottom: 0px;
+	}
+
+	.wsactive .wsanimated-arrow span:after {
+		transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+
+/* ================== Mobile Overlay/Drawer CSS ================== */
+	.overlapblackbg {
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		min-height: 100%;
+		position: fixed;
+		top: 0;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+		background-color: rgba(0, 0, 0, 0.65);
+		cursor: pointer;
+		backdrop-filter: blur(10px);
+	}
+	.wsactive .wsmenu .overlapblackbg {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transition: opacity 0.25s ease-in-out;
+		-moz-transition: opacity 0.25s ease-in-out;
+		-ms-transition: opacity 0.25s ease-in-out;
+		-o-transition: opacity 0.25s ease-in-out;
+	}
+	.wsactive .wsmenu {
+		-webkit-overflow-scrolling: touch;
+		visibility: visible;
+		z-index: 1000;
+		top: 0;
+	}
+	.wsactive .wsmenu>.wsmenu-list {
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+		margin-left: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding-block: 5px 30px;
+		overflow: auto;
+		height: 100vh;
+	}
+}
